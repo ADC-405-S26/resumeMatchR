@@ -1,0 +1,148 @@
+---
+output: github_document
+---
+
+# resumeMatchR
+
+`resumeMatchR` is an R package designed to help users compare resumes and job descriptions using simple text analysis tools. The package includes functions for counting keywords, identifying missing skills, and calculating a basic text similarity score between resumes and job postings.
+
+This package was created as part of an R package development project using the `devtools` ecosystem.
+
+---
+
+# Features
+
+The package currently includes three main functions:
+
+## `count_keywords()`
+Counts how many times selected keywords appear in a piece of text.
+
+Example use:
+- Count how many times skills like `"Python"` or `"SQL"` appear in a resume.
+
+---
+
+## `missing_skills()`
+Finds skills from a job description that are missing from a resume.
+
+Example use:
+- Identify important skills a candidate may want to add to their resume.
+
+---
+
+## `text_similarity_simple()`
+Calculates a simple overlap score between a resume and a job description.
+
+Example use:
+- Measure how closely a resume matches a job posting.
+
+---
+
+# Installation
+
+You can install the development version of `resumeMatchR` from GitHub:
+
+```r
+# install.packages("devtools")
+
+devtools::install_github("https://github.com/ADC-405-S26/resumeMatchR")
+```
+
+---
+
+# Required Packages
+
+This package uses:
+
+- `checkmate`
+- `stringr`
+- `testthat`
+
+---
+
+# Example Dataset
+
+The package includes a sample dataset called `resume_sample_data`.
+
+The dataset contains:
+- candidate names
+- target roles
+- resume text
+- job description text
+
+Load the dataset:
+
+```r
+data(resume_sample_data)
+```
+
+View the dataset:
+
+```r
+head(resume_sample_data)
+```
+
+---
+
+# Example Usage
+
+## Count Keywords
+
+```r
+count_keywords(
+  resume_sample_data$resume_text[1],
+  c("Python", "SQL", "Tableau")
+)
+```
+
+---
+
+## Find Missing Skills
+
+```r
+missing_skills(
+  resume_sample_data$resume_text[1],
+  c("Python", "SQL", "Tableau")
+)
+```
+
+---
+
+## Calculate Similarity Score
+
+```r
+text_similarity_simple(
+  resume_sample_data$resume_text[1],
+  resume_sample_data$job_description[1]
+)
+```
+
+---
+
+# Defensive Programming
+
+All functions include input validation using the `checkmate` package to ensure:
+- correct input types
+- informative error messages
+- safer function behavior
+
+---
+
+# Testing
+
+The package includes unit tests written with the `testthat` framework to verify:
+- correct outputs
+- edge cases
+- invalid inputs
+
+---
+
+# Package Website
+
+The package website was created using `pkgdown`.
+
+---
+
+# Author
+
+Created by Nadika Sharma
