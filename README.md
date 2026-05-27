@@ -50,7 +50,7 @@ You can install the development version of `resumeMatchR` from GitHub:
 ``` r
 # install.packages("devtools")
 
-devtools::install_github("https://github.com/ADC-405-S26/resumeMatchR")
+devtools::install_github("ADC-405-S26/resumeMatchR")
 ```
 
 ------------------------------------------------------------------------
@@ -135,13 +135,3 @@ The package includes unit tests written with the `testthat` framework to
 verify: - correct outputs - edge cases - invalid inputs
 
 ------------------------------------------------------------------------
-
-# Package Website
-
-The package website was created using `pkgdown`.
-
-------------------------------------------------------------------------
-
-# Author
-
-Created by Nadika Sharma
