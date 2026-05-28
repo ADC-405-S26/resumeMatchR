@@ -32,3 +32,7 @@ test_that("count_keywords gives error for invalid input", {
   expect_error(count_keywords("text", character(0)))
   expect_error(count_keywords("text", c("R"), ignore_case = "yes"))
 })
+
+test_that("count_keywords gives error for empty text", {
+  expect_error(count_keywords("", c("R", "Python")))
+})

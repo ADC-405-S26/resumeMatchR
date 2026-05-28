@@ -19,7 +19,7 @@
 #' @importFrom checkmate assert_character
 #' @importFrom checkmate assert_logical
 count_keywords <- function(text, keywords, ignore_case = TRUE) {
-  checkmate::assert_string(text)
+  checkmate::assert_string(text, min.chars = 1)
   checkmate::assert_character(keywords, min.len = 1, any.missing = FALSE)
   checkmate::assert_logical(ignore_case, len = 1, any.missing = FALSE)
 

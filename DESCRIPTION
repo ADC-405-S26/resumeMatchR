@@ -1,9 +1,9 @@
-Package: project
-Title: What the Package Does (One Line, Title Case)
+Package: resumeMatchR
+Title: Simple Tools for Resume and Job Description Matching
 Version: 0.0.0.9000
 Authors@R: 
     person("Nadika", "Sharma", , "sharman@lawrence.edus", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
+Description: Provides simple text analysis tools for comparing resumes and job descriptions. The package includes functions for counting keywords, identifying missing skills, and calculating basic text similarity scores between resumes and job postings. It is designed to help users explore resume matching workflows using reproducible and beginner-friendly R functions.
 License: MIT + file LICENSE
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
@@ -20,3 +20,4 @@ Depends:
     R (>= 3.5)
 LazyData: true
 VignetteBuilder: knitr
+URL: https://adc-405-s26.github.io/resumeMatchR/

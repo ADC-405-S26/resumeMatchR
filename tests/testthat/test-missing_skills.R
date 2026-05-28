@@ -33,6 +33,14 @@ test_that("missing_skills returns character vector", {
 
   expect_type(result, "character")
 })
+test_that("missing_skills does not return duplicate missing skills", {
+  resume <- "I know R and Excel."
+  skills <- c("Python", "Python", "SQL", "SQL", "Excel")
+
+  result <- missing_skills(resume, skills)
+
+  expect_equal(result, c("Python", "SQL"))
+})
 
 test_that("missing_skills gives error for invalid inputs", {
   expect_error(missing_skills(123, c("R", "Python")))

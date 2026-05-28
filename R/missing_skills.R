@@ -19,9 +19,11 @@
 #' missing_skills(resume, skills)
 missing_skills <- function(resume_text, required_skills, ignore_case = TRUE) {
 
-  checkmate::assert_string(resume_text)
+  checkmate::assert_string(resume_text, min.chars = 1)
   checkmate::assert_character(required_skills, min.len = 1, any.missing = FALSE)
   checkmate::assert_logical(ignore_case, len = 1, any.missing = FALSE)
+
+  required_skills <- unique(required_skills)
 
   if (ignore_case) {
     resume_text_search <- tolower(resume_text)

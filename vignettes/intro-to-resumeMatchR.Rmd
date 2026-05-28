@@ -15,7 +15,7 @@ knitr::opts_chunk$set(
 ```
 
 ```{r setup}
-library(project)
+library(resumeMatchR)
 ```
 
 # Introduction
@@ -39,7 +39,10 @@ Load the dataset:
 ```{r}
 data(resume_sample_data)
 
-head(resume_sample_data)
+knitr::kable(
+  resume_sample_data,
+  caption = "Sample Resume and Job Description Dataset"
+)
 ```
 
 The dataset contains:
@@ -63,7 +66,7 @@ This is useful for checking whether important skills appear in a resume.
 
 # Finding Missing Skills
 
-The `missing_skills()` function identifies skills that appear in the job description but are missing from the resume.
+The `missing_skills()` function identifies required skills that are missing from the resume.
 
 ```{r}
 missing_skills(
@@ -89,6 +92,8 @@ The similarity score ranges from 0 to 1:
 - values closer to 1 indicate higher similarity
 - values closer to 0 indicate lower similarity
 
+
+# Conclusion
 
 # Conclusion
 
