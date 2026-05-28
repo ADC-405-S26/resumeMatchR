@@ -1,7 +1,6 @@
 # Introduction to resumeMatchR
 
 ``` r
-
 library(resumeMatchR)
 ```
 
@@ -27,7 +26,6 @@ The package includes a sample dataset called `resume_sample_data`.
 Load the dataset:
 
 ``` r
-
 data(resume_sample_data)
 
 knitr::kable(
@@ -42,7 +40,7 @@ knitr::kable(
 | Brian Lee | Marketing Intern | Skilled in social media marketing, Canva, communication, and content creation. | Seeking experience with Canva, TikTok marketing, communication, and analytics. |
 | Sophia Patel | Software Engineer | Experience with Java, Python, Git, problem solving, and teamwork. | Must know Java, Git, SQL, teamwork, and debugging. |
 
-Sample Resume and Job Description Dataset {.table}
+Sample Resume and Job Description Dataset
 
 The dataset contains: - candidate names - target roles - resume text -
 job descriptions
@@ -55,7 +53,6 @@ function counts how many times selected keywords appear in a piece of
 text.
 
 ``` r
-
 count_keywords(
   resume_sample_data$resume_text[1],
   c("Python", "SQL", "Tableau")
@@ -75,7 +72,6 @@ The
 function identifies required skills that are missing from the resume.
 
 ``` r
-
 missing_skills(
   resume_sample_data$resume_text[1],
   c("Python", "SQL", "Tableau")
@@ -94,7 +90,6 @@ function calculates a simple overlap score between a resume and a job
 description.
 
 ``` r
-
 text_similarity_simple(
   resume_sample_data$resume_text[1],
   resume_sample_data$job_description[1]

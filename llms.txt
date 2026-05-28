@@ -47,7 +47,6 @@ Example use: - Measure how closely a resume matches a job posting.
 You can install the development version of `resumeMatchR` from GitHub:
 
 ``` r
-
 # install.packages("devtools")
 
 devtools::install_github("ADC-405-S26/resumeMatchR")
@@ -75,14 +74,12 @@ job description text
 Load the dataset:
 
 ``` r
-
 data(resume_sample_data)
 ```
 
 View the dataset:
 
 ``` r
-
 head(resume_sample_data)
 ```
 
@@ -93,7 +90,6 @@ head(resume_sample_data)
 ## Count Keywords
 
 ``` r
-
 count_keywords(
   resume_sample_data$resume_text[1],
   c("Python", "SQL", "Tableau")
@@ -105,7 +101,6 @@ count_keywords(
 ## Find Missing Skills
 
 ``` r
-
 missing_skills(
   resume_sample_data$resume_text[1],
   c("Python", "SQL", "Tableau")
@@ -117,7 +112,6 @@ missing_skills(
 ## Calculate Similarity Score
 
 ``` r
-
 text_similarity_simple(
   resume_sample_data$resume_text[1],
   resume_sample_data$job_description[1]
