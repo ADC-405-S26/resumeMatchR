@@ -107,8 +107,6 @@ higher similarity - values closer to 0 indicate lower similarity
 
 ## Conclusion
 
-## Conclusion
-
 `resumeMatchR` provides simple tools for resume and job description
 analysis. The package demonstrates basic text processing, defensive
 programming, testing, and package development using the `devtools`
